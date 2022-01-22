@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,65 +18,68 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-<!-- header section starts  -->
+    <!-- header section starts  -->
 
-<header class="header">
+    <header class="header">
 
-    <a href="#" class="logo"><span>Toastizi</span></a>
+        <a href="#" class="logo"><span>Toastizi</span></a>
 
-    <nav class="navbar">
-        <a href="#try">Try it</a>
-        <a href="#usage">Usage</a>
-        <a href="#next">Whats next</a>
-    </nav>
+        <nav class="navbar">
+            <a href="#try">Try it</a>
+            <a href="#usage">Usage</a>
+            <a href="#next">Whats next</a>
+        </nav>
 
-    <div class="icons">
-        <i class="fas fa-bars" id="menu-bars"></i>
-    </div>
-
-
-</header>
-
-<!-- header section ends -->
-
-<!-- Banner section starts-->
-
-<section class="banner">
-    <h1>Toastizi</h1>
-    <p>Minimalist and easy to use toast plugin written in pure JS.</p>
-</section>
-
-<!-- Banner section ends-->
-
-<!-- content section starts  -->
-
-<section class="content" id="try">
-
-    <h2>You can try the plugin with the button below.</h2>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+        </div>
 
 
-    <div class="btn" id="basic-toast">Open a basic toast</div>
-    <div class="btn" id="close-toast">Open a toast with close button</div>
-    <div class="btn" id="styled-toast">Open a styled toast</div>
+    </header>
 
-</section>
+    <!-- header section ends -->
 
-<section class="content" id="usage">
+    <!-- Banner section starts-->
 
-    <h2>How to integrate Toastizi in your projects ?</h2>
-    <br>
-    <p>First you need to download it. You have two possibilities:
+    <section class="banner">
+        <h1>Toastizi</h1>
+        <p>Minimalist and easy to use toast plugin written in pure JS.</p>
+    </section>
+
+    <!-- Banner section ends-->
+
+    <!-- content section starts  -->
+
+    <section class="content" id="try">
+
+        <h2>You can try the plugin with the button below.</h2>
+
+
+        <div class="btn" id="basic-toast">Open a basic toast</div>
+        <div class="btn" id="close-toast">Open a toast with close button</div>
+        <div class="btn" id="styled-toast">Open a styled toast</div>
+
+    </section>
+
+    <section class="content" id="usage">
+
+        <h2>How to integrate Toastizi in your projects ?</h2>
+        <br>
+        <p>First you need to download it. You have two possibilities:
         <ul>
-            <li>Download the minified files here.</li>
-            <li>You need to edit files ? Go to the GitHub repository and download the files in the src folder.</li>
+            <li>Download the minified files <a href="./toastizi.zip">here</a>.</li>
+            <li>You need to edit files ? Go to the <a href="https://github.com/victor-prdh/toastizi">GitHub
+                    repository</a> and download the files in the src
+                folder.</li>
 
         </ul>
-    </p>
-    <br>
-    <p>Now you can create a new toast like that</p>
-    <pre><code class="language-javascript">
+        </p>
+        <br>
+        <p>Now you can create a new toast like that</p>
+        <pre><code class="language-javascript">
         var toast = new toastizi.toast({
             content: 'The content of the toast',
             closeButton: true,
@@ -86,93 +90,94 @@
           });
     </code></pre>
 
-    <br>
-    <p>You have just to ask him to appear like that:</p>
+        <br>
+        <p>You have just to ask him to appear like that:</p>
 
-    <pre><code class="language-javascript">
+        <pre><code class="language-javascript">
         toast.open();
     </code></pre>
-    
 
-    <br>
-    <p>You want close him with javascript ? It's like that:</p>
 
-    <pre><code class="language-javascript">
+        <br>
+        <p>You want close him with javascript ? It's like that:</p>
+
+        <pre><code class="language-javascript">
         toast.close();
     </code></pre>
 
-</section>
+    </section>
 
-<section class="content" id="next">
+    <section class="content" id="next">
 
-    <h2>Whats next ?</h2>
+        <h2>Whats next ?</h2>
 
-    <br>
-    <p>The next step for Toastizi is supporting multiple toast. Actually, toast are stacked in the bottom right corner and it's not really awesome...</p>
+        <br>
+        <p>The next step for Toastizi is supporting multiple toast. Actually, toast are stacked in the bottom right
+            corner and it's not really awesome...</p>
 
-</section>
+    </section>
 
-<!-- content section ends -->
+    <!-- content section ends -->
 
-<!-- footer section starts  -->
+    <!-- footer section starts  -->
 
-<section class="footer">
+    <section class="footer">
 
-    <div class="follow">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-        <a href="#" class="fab fa-linkedin"></a>
-    </div>
+        <div class="follow">
+            <a href="https://github.com/victor-prdh/toastizi" class="fab fa-github"></a>
+            <a href="https://www.linkedin.com/in/victor-prdh/" class="fab fa-linkedin"></a>
+        </div>
 
-    <div class="credit">Created by <a href="https://victor-prdh.com" target="_blank"><span style="text-decoration: underline;">Prudhomme Victor</span></a> | all rights reserved</div>
+        <div class="credit">Created by <a href="https://victor-prdh.com" target="_blank"><span
+                    style="text-decoration: underline;">Prudhomme Victor</span></a></div>
 
-</section>
+    </section>
 
-<!-- footer section ends -->
-
-
+    <!-- footer section ends -->
 
 
-<!-- Your js file here  -->
-<script>
-    let menu = document.querySelector('#menu-bars');
-    let navbar = document.querySelector('.navbar');
 
-    menu.onclick = () =>{
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
-    searchForm.classList.remove('active');
-    }
-</script>
-<script src="./highlight.js"></script>
-<script>hljs.highlightAll();</script>
-<!-- toastizi script -->
-<script src=".toastizi.js"></script>
-<script>
-    document.querySelector("#basic-toast").addEventListener("click", function (e) {
-        new toastizi.toast({
-            content: 'Toast will close after 5s',
-            autoCloseTime: 5000,
-            closeButton: false
-        }).open()
-    })
 
-    document.querySelector("#close-toast").addEventListener("click", function (e) {
-        new toastizi.toast({
-            content: 'Toast will close after 8s or with the close button',
-        }).open()
-    })
+    <!-- Your js file here  -->
+    <script>
+        let menu = document.querySelector('#menu-bars');
+        let navbar = document.querySelector('.navbar');
 
-    document.querySelector("#styled-toast").addEventListener("click", function (e) {
-        new toastizi.toast({
-            content: 'Wow whats a nice toast',
-            backgroundColor: '#28a745',
-            color: '#FFF'
-        }).open()
-    })
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+            searchForm.classList.remove('active');
+        }
+    </script>
+    <script src="./highlight.js"></script>
+    <script>hljs.highlightAll();</script>
+    <!-- toastizi script -->
+    <script src="./toastizi.js"></script>
+    <script>
+        document.querySelector("#basic-toast").addEventListener("click", function (e) {
+            new toastizi.toast({
+                content: 'Toast will close after 5s',
+                autoCloseTime: 5000,
+                closeButton: false
+            }).open()
+        })
 
-</script>
-    
+        document.querySelector("#close-toast").addEventListener("click", function (e) {
+            new toastizi.toast({
+                content: 'Toast will close after 8s or with the close button',
+            }).open()
+        })
+
+        document.querySelector("#styled-toast").addEventListener("click", function (e) {
+            new toastizi.toast({
+                content: 'Wow whats a nice toast',
+                backgroundColor: '#28a745',
+                color: '#FFF'
+            }).open()
+        })
+
+    </script>
+
 </body>
+
 </html>
